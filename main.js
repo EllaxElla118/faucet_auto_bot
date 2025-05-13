@@ -8,8 +8,8 @@ let page;
     startCountdown().catch(console.error);
     try {
         browser = await puppeteer.launch({
-            headless: false,
-            devtools: true,
+            headless: true,
+            args: ['--no-sandbox']
         });
         page = await browser.newPage();
 
