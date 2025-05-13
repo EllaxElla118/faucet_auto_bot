@@ -34,6 +34,8 @@ let page;
             }, { timeout: 0});
             await new Promise(resolve=>setTimeout(resolve,randomDelay))
             await page.locator('#body > div.wrapper-parent.mm-show > div.content-wrap > div.main-content > div > div.row.mt-0 > div.col-12.col-md-8.col-lg-6.order-md-2.mb-4.text-center > form > button').click();
+            await new Promise(resolve=>setTimeout(resolve,1500))
+            await page.locator('#body > div.wrapper-parent.mm-show > div.content-wrap > div.main-content > div > div.row.mt-0 > div.col-12.col-md-8.col-lg-6.order-md-2.mb-4.text-center > form > button').click();
             i++;
             console.log('Claimed ' + i + ' times')
         }
