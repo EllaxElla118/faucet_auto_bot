@@ -16,5 +16,8 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Depedencies
+        run: npm install
+
       - name: Run Bot 
         run: npm start
