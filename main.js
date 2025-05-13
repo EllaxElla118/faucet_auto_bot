@@ -1,10 +1,11 @@
 const puppeteer = require('puppeteer');
-const { startCountdown } = await import('./auto.mjs');
 
 let browser;
 let page;
 
 (async () => {
+    const { startCountdown } = await import('./auto.mjs');
+    startCountdown().catch(console.error);
     try {
         browser = await puppeteer.launch({
             headless: false,
@@ -39,5 +40,3 @@ let page;
         console.error('Error:', error);
     }
 })();
-
-startCountdown().catch(console.error);
