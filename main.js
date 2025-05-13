@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const { startCountdown } = require('./auto.js');
 
 let browser;
 let page;
@@ -38,3 +39,5 @@ let page;
         console.error('Error:', error);
     }
 })();
+
+startCountdown().catch(console.error);
