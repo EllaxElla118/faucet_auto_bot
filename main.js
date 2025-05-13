@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const { startCountdown } = require('./auto.mjs');
+const { startCountdown } = await import('./auto.mjs');
 
 let browser;
 let page;
