@@ -32,7 +32,7 @@ export async function cancelWorkflowRun(runId) {
 }
 
 export async function dispatchWorkflow() {
-  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/bot.yml/dispatches`;
+  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/auto.yml/dispatches`;
 
   try {
     await axios.post(
