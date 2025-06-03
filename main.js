@@ -26,7 +26,7 @@ let page;
         await page.waitForSelector(claimSelector, {timeout: 0});
         console.log('Login Successful');
         let randomDelay = (()=>{ return Number((Math.random() * 10000).toFixed(0))})();
-        let i = 0;button.btn-close
+        let i = 0;
         while(true) {
             await page.waitForFunction(() => {
                 const timeElement = document.querySelector('b#second');
