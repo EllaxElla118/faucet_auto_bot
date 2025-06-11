@@ -1,4 +1,9 @@
 const puppeteer = require('puppeteer');
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const [FAUCET_USERNAME, FAUCET_PASSWORD] = process.env.FAUCET_USERNAME_PASSWORD.split(',');
 
 let browser;
 let page;
@@ -15,8 +20,8 @@ let page;
 
         /* Login */
         await page.goto('https://www.faucetearner.org/login.php', { waitUntil: 'domcontentloaded', timeout: 0 });
-        await page.locator("input#email").fill("Daniella");
-        await page.locator("input#password").fill("yNBp!$5cQEE0ItZ");
+        await page.locator("input#email").fill(FAUCET_USERNAME);
+        await page.locator("input#password").fill(FAUCET_PASSWORD);
         await page.locator("button.btn-submit").click();
 
         let claimSelector = '#body > div.wrapper-parent.mm-show > div.content-wrap > div.main-content > div > div.row.mt-0 > div.col-12.col-md-8.col-lg-6.order-md-2.mb-4.text-center > form > button';
